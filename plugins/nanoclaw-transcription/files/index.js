@@ -42,7 +42,7 @@ const FALLBACK = '[Voice Message - transcription unavailable]';
  * onInboundMessage hook — transcribe voice notes from any channel.
  * Channel plugins set mediaType='audio' and mediaHostPath for audio messages.
  */
-export async function onInboundMessage(msg, channel) {
+export async function onInboundMessage(msg, channel, logger) {
   if (msg.mediaType !== 'audio' || !msg.mediaHostPath) return msg;
   if (!fs.existsSync(msg.mediaHostPath)) return msg;
 
@@ -62,7 +62,9 @@ export async function onInboundMessage(msg, channel) {
       msg.content = msg.content ? `${msg.content}\n${FALLBACK}` : FALLBACK;
     }
   } catch (err) {
-    console.error('Transcription plugin error:', err);
+    logger
+      ? logger.error({ err }, 'Transcription plugin error')
+      : console.error({ err }, 'Transcription plugin error');
     msg.content = msg.content
       ? `${msg.content}\n[Voice Message - transcription failed]`
       : '[Voice Message - transcription failed]';
