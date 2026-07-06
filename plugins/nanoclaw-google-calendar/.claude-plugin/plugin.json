@@ -1,0 +1,5 @@
+{
+  "name": "nanoclaw-google-calendar",
+  "version": "1.0.0",
+  "description": "Add Google Calendar access to NanoClaw via gog CLI with OAuth. Guides through authentication and configures environment variables. Triggers on \"add google calendar\", \"google calendar setup\", \"gog calendar\"."
+}

@@ -1,10 +1,9 @@
 {
-  "name": "calendar",
-  "description": "Calendar access via gog CLI and CalDAV",
+  "name": "google-calendar",
+  "description": "Google Calendar access via gog CLI",
   "containerEnvVars": [
     "GOG_KEYRING_PASSWORD",
-    "GOG_ACCOUNT",
-    "CALDAV_ACCOUNTS"
+    "GOG_ACCOUNT"
   ],
   "containerMounts": [
     {

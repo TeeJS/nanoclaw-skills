@@ -1,0 +1,16 @@
+{
+  "name": "caldav",
+  "description": "CalDAV calendar access (iCloud, Nextcloud, Fastmail)",
+  "containerEnvVars": [
+    "CALDAV_ACCOUNTS"
+  ],
+  "containerMounts": [],
+  "hooks": [],
+  "channels": [
+    "*"
+  ],
+  "groups": [
+    "*"
+  ],
+  "version": "1.0.0"
+}

@@ -1,0 +1,5 @@
+{
+  "name": "nanoclaw-caldav",
+  "version": "1.0.0",
+  "description": "Add CalDAV calendar access to NanoClaw. Supports iCloud, Nextcloud, Fastmail and other CalDAV providers via Basic Auth. Guides through app-specific password setup and configures environment variables. Triggers on \"add caldav\", \"icloud calendar\", \"nextcloud calendar\", \"fastmail calendar\", \"caldav setup\"."
+}

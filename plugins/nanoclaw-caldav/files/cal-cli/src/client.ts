@@ -13,7 +13,7 @@ export function loadAccounts(): CalDAVAccount[] {
   const raw = process.env.CALDAV_ACCOUNTS;
   if (!raw) {
     console.error('Error: CALDAV_ACCOUNTS environment variable not set.');
-    console.error('Configure it via the /add-cal skill or set it manually in .env');
+    console.error('Configure it via the /add-caldav skill or set it manually in .env');
     process.exit(1);
   }
   try {

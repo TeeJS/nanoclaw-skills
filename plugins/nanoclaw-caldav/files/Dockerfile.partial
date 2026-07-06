@@ -1,0 +1,3 @@
+# CalDAV plugin: cal-cli (iCloud, Nextcloud, Fastmail)
+COPY plugins/caldav/cal-cli/ /opt/cal-cli/
+RUN cd /opt/cal-cli && npm install && npm run build && npm prune --omit=dev && rm -rf src/ tsconfig.json
